@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ASHABOT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   <!--<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />-->
+
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+           height:100%;
+           background-color:#034afc;
+             }
+
+        .wrap{
+          position: absolute;
+          width: 100%;
+          height: 80%;
+          overflow: hidden;
+          <!--background-image:url('');
+          background-repeat: no-repeat;
+          background-size: cover;-->
+          <!--background: linear-gradient(
+            90deg,
+            rgba(2, 0, 0.6, 1) 0%,
+            rgba(63,61,61,1) 35%,
+            rgba(103, 100, 100, 1) 100%-->
+          );
+        }
+        .img1 img{
+        width: 100%;
+        height:600px;
+        }
+        .wrap h2{
+            font-family: "Baloo Bhaina 2", cursive;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            margin: 0;
+
+        }
+
+        .box div {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background-color: transparent;
+          border: 6px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .box div:nth-child(1) {
+          top: 12%;
+          left: 42%;
+          animation: animate 8s linear infinite;
+        }
+        .box div:nth-child(2) {
+          top: 70%;
+          left: 50%;
+          animation: animate 10s linear infinite;
+
+        }
+        .box div:nth-child(3) {
+          top: 17%;
+          left: 6%;
+          animation: animate 5s linear infinite;
+        }
+        .box div:nth-child(4) {
+          top: 20%;
+          left: 60%;
+          animation: animate 10s linear infinite;
+        }
+        .box div:nth-child(5) {
+          top: 67%;
+          left: 10%;
+          animation: animate 6s linear infinite;
+        }
+        .box div:nth-child(6) {
+          top: 80%;
+          left: 70%;
+          animation: animate 12s linear infinite;
+        }
+        .box div:nth-child(7) {
+          top: 60%;
+          left: 80%;
+          animation: animate 6s linear infinite;
+        }
+        .box div:nth-child(8) {
+          top: 32%;
+          left: 25%;
+          animation: animate 7s linear infinite;
+        }
+        .box div:nth-child(9) {
+          top: 90%;
+          left: 25%;
+          animation: animate 9s linear infinite;
+        }
+        .box div:nth-child(10) {
+          top: 20%;
+          left: 80%;
+          animation: animate 5s linear infinite;
+        }
+        @keyframes animate {
+          0% {
+            transform: scale(0) translateY(0) rotate(0);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.3) translateY(-90px) rotate(360deg);
+            opacity: 1;
+          }
+        }
+        .img2 {
+        position: relative;
+        background:url("https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 515px;
+        height: 500px;
+        width: 100%;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+        }
+        .container p{
+        position: relative;
+        top:20%;
+        font-family: "Roboto:,sans-serif;
+        color:#ffffff;
+        font-size: 15px;
+        }
+
+        #slider {
+          margin-top: 600px;
+        }
+        .img-area {
+          width: 200px;
+          height: 100px;
+          border-radius: 50;
+          display: inline-block;
+          overflow: hidden;
+        }
+        .img-area img {
+          width: 100px;
+        }
+        .content {
+          text-align: center;
+          padding: 40px;
+          color: white;
+          border-radius: 25px;
+          background-color: rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+        .content h3 {
+          font-size: 20px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        .content p {
+          line-height: 1.9;
+        }
+        .socials {
+          margin-top: 30px;
+        }
+        .socials i {
+          font-size: 20px;
+          margin: 0 10px;
+        }
+        .owl-dot {
+          text-align: center;
+          margin-top: 3%;
+        }
+        .owl-dot {
+          display: inline-block;
+          height: 20px !important;
+          width: 20px !important;
+          background-color: white !important;
+          opacity: 0.8;
+          margin: 10px 10px;
+          border-radius: 50%;
+        }
+        .owl-dot.active {
+          background-color: white !important;
+        }
+        html{
+          height:100%;
+          }
+        .page-wrapper{
+          min-height:100%;
+          }
+        .footer{
+        background: #303030;
+        color:#3d3d3d;
+        height: 510px;
+        position: relative;
+        }
+        .footer-area{
+            background:#15181d;
+            padding: 130px 0px;
+        }
+        @media(max-width:991px){
+        .single-footer-widget{margin-bottom:40px}
+        }
+        .single-footer-widget p{
+        margin-bottom:15px;
+        }
+        .single-footer-widget p:last-child{margin-bottom:0; text-align: justify;text-justify: inter-word;}
+        .single-footer-widget p a{color:#ff2456; font-size:15px;}
+        .single-footer-widget .sm-head{color:ff2456; margin-bottom:0px}
+        .single-footer-widget .sm-head span{position: relative;margin-left:-40;
+            margin-right:10px;
+            display:inline-block;
+            width:28px;
+            height:28px;
+            line-height:28px;
+            text-align:center;
+            background:#ff573d;
+            color:#ffffff;
+            border-radius:15px;
+            }
+        .tp_widgets .list li{margin-bottom:12px}
+        .tp_widgets .list a{
+            color:#7b838a;
+            font-family:"Roboto:,sans-serif;
+            }
+            .tp_widgets .list li a:hover{color:#ff573d}
+            .tp_widgets .list li:last-child{margin-bottom:0px}
+            .tp_widgets p{color:#7b838a; font-size:15px;}
+            .footer_title{font-size:18px;line-height:24px;
+                font-weight:500;
+                font-family:"Lora",serif;
+                text-transform:capitalize;
+                color:#fff;
+                margin-bottom:28px;
+                }
+                @media(max-width:991px){
+                .footer_title{margin-bottom:20px}}
+                .footer_title.large_title{font-size:36px; font-weight:600}
+                @media(max-width:1199px){.footer_title.large_title{font-size:18px}}
+
+        .page-wrapper{
+          min-height:100%;
+          }
+
+
+    </style>
+</head>
+<body>
+<!-- navbar start -->
+
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">ASHABOT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Log Out</a>
+        </li>
+         {% else %}
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/signup">Sign Up</a>
+        </li>
+
+         {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="wrap">
+
+        <h2> welcome </h2>
+    <div class="img1"  >
+        <img src="https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="An image of harsha" />
+
+
+
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </div>
+    </div>
+
+<div class="img2">
+    <div class="container">
+        <!--<div class="row section_gap">-->
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <h4 class="info_head" style="color:white">A new design for mental health</h4>
+                <p style="color:white">The modern age has produced many ways to treat mental illness, from talk
+                    therapy to first generation digital therapeutics. But new approaches are needed to
+                    meet the soaring global demand for accessible solutions that can help people manage
+                    symptoms in the moment, and over a lifetime. We’re on a mission to meet the need for a new
+                    generation of therapeutics that are as dynamic as the people they serve and the world in which we live.
+                    Digital products designed to easily adapt to symptoms and severity, and deliver the right intervention to
+                    the right person at the right time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container">
+
+
+        <img src="https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid" width=100% alt=""/>
+
+        <p>A new design for mental health
+            <br><br>
+            The modern age has produced many ways to treat mental illness, from talk therapy to first generation digital therapeutics.
+            But new approaches are needed to meet the soaring global demand for accessible solutions that can help people manage symptoms in the moment, and over a lifetime.
+            We’re on a mission to meet the need for a new generation of therapeutics that are as dynamic as the people they serve and the world in which we live. Digital products designed to easily adapt to symptoms and severity, and deliver the right intervention to the right person at the right time.
+        </p>
+
+
+    </div>-->
+
+
+
+    <div class="container">
+      <div id="slider" class="owl-carousel">
+        <div class="content-area">
+          <div class="content">
+            <div class="img-area"><img src="https://images.pexels.com/photos/1440722/pexels-photo-1440722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /></div>
+            <h3>Srishti Varma</h3>
+            <p>Lorem</p>
+            <p class="socials">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-google-plus"></i>
+            </p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="content">
+            <div class="img-area"><img src="https://images.pexels.com/photos/1440722/pexels-photo-1440722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /></div>
+            <h3>Harsha Munshi</h3>
+            <p>Lorem</p>
+            <p class="socials">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-google-plus"></i>
+            </p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="content">
+            <div class="img-area"><img src="https://images.pexels.com/photos/1440722/pexels-photo-1440722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /></div>
+            <h3>Aakriti Mathur</h3>
+            <p>Lorem</p>
+            <p class="socials">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-google-plus"></i>
+            </p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="content">
+            <div class="img-area"><img src="https://images.pexels.com/photos/1440722/pexels-photo-1440722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /></div>
+            <h3>Ankita Arora</h3>
+            <p>Lorem</p>
+            <p class="socials">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-google-plus"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!--<div class="page-wrapper">
+     </div>-->
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="footer-area">
+        <div class="container">
+            <div class="row section_gap">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="single-footer-widget tp_widgets">
+                        <h4 class="footer_title large_title">About Us</h4>
+                        <p>The modern age has produced many ways to treat mental illness,
+                            from talk therapy to first generation digital therapeutics.
+                            We’re on a mission to meet the need for a new generation of
+                            therapeutics that are as dynamic as the people they serve and the world in which we live.
+                            Digital products designed to easily adapt to symptoms and severity, and deliver the
+                            right intervention to the right person at the right time.</p>
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p>&copy; ASHABOT</p>
+                    </div>
+                </div>
+            <div class="offset-lg-1 col-lg-2 md-6 col-sm-6">
+                <div class="single-footer-widget tp_widgets">
+                    <h4 class="footer_title"> Quick Links</h4>
+                    <ul class="list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="offset-lg-1 col-lg-2 md-6 col-sm-6">
+                <div class="single-footer-widget tp_widgets">
+                    <h4 class="footer_title"> Contact Us</h4>
+                    <div class="ml-5">
+                        <p class="sm-head">
+                        </p>
+                        <p><i class="fas fa-home"></i> Greater Kailash, New Delhi, India</p>
+                        <p class="sm-head">
+                        </p>
+                        <p><i class="fas fa-envelope"></i> info@ashabot.in</p>
+                        <p class="sm-head">
+                        </p>
+                        <p><i class="fas fa-phone"></i> +91-8383807398</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+    </footer>
+    <!--//footer-->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $("#slider").owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
